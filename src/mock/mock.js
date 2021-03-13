@@ -1,0 +1,121 @@
+import Mock from 'mockjs'
+const Random = Mock.Random;
+//使用mockjs模拟数据
+Mock.setup({
+	timeout: 1000
+	})
+Mock.mock(RegExp('home/list.json' + ".*"),
+	"get",
+{
+    "data":
+		{
+			"list":[
+				{
+					'id|+1':1,
+					"title":Random.ctitle(),
+					"intro":"intro",
+					"source":"source",
+					"comment":"comment",
+					"time":"time",
+					"images":[
+						Random.image('120x60')
+					]
+			},
+			{
+				'id|+1':1,
+				"title":Random.ctitle(),
+				"intro":"intro",
+				"source":"source",
+				"comment":"comment",
+				"time":"time",
+				"images":[
+					Random.image('120x60')
+				]
+		},
+		{
+			'id|+1':1,
+			"title":Random.ctitle(),
+			"intro":"intro",
+			"source":"source",
+			"comment":"comment",
+			"time":"time",
+			"images":[
+				Random.image('120x60')
+			]
+	},
+	{
+		'id|+1':1,
+		"title":Random.ctitle(),
+		"intro":"intro",
+		"source":"source",
+		"comment":"comment",
+		"time":"time",
+		"images":[
+			Random.image('120x60')
+		]
+},
+{
+	'id|+1':1,
+	"title":Random.ctitle(),
+	"intro":"intro",
+	"source":"source",
+	"comment":"comment",
+	"time":"time",
+	"images":[
+		Random.image('120x60')
+	]
+},
+{
+	'id|+1':1,
+	"title":Random.ctitle(),
+	"intro":"intro",
+	"source":"source",
+	"comment":"comment",
+	"time":"time",
+	"images":[
+		Random.image('120x60')
+	]
+},
+{
+	'id|+1':1,
+	"title":Random.ctitle(),
+	"intro":"intro",
+	"source":"source",
+	"comment":"comment",
+	"time":"time",
+	"images":[
+		Random.image('120x60')
+	]
+},
+{
+	'id|+1':1,
+	"title":Random.ctitle(),
+	"intro":"intro",
+	"source":"source",
+	"comment":"comment",
+	"time":"time",
+	"images":[
+		Random.image('120x60')
+	]
+},
+
+				]
+		}
+});
+
+Mock.mock(RegExp('article/info' + ".*"),
+	"get",
+{
+	"data":
+	{
+		'id|+1':1,
+		"title":Random.ctitle(),
+		"intro":"intro",
+		"source":"source",
+		"comment":"comment",
+		"time":"@integer(0,78)",
+		"tags|3":[1],
+		"attention":false,
+		"islike":false,
+		"like_num":"@integer(0,100000)"}}
+);
